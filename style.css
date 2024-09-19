@@ -1,0 +1,40 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+body {
+    font-family: 'Ampersans', sans-serif;
+	color: #000000;
+	text-size-adjust: 100%;
+	margin: 0;
+	display: flex;	
+	flex-direction: column;
+	
+} 
