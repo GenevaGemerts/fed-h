@@ -30,11 +30,286 @@
 /* jouw code */
 
 body {
-    font-family: 'Ampersans', sans-serif;
-	color: #000000;
-	text-size-adjust: 100%;
-	margin: 0;
-	display: flex;	
-	flex-direction: column;
-	
-} 
+    margin: 0;
+    padding: 0;
+}
+
+/* Zorgt ervoor dat de <p> helemaal bovenaan de pagina komt */
+header p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000; /* Optionele achtergrondkleur */
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 1; /* Zorgt dat <p> boven andere elementen staat */
+    color: #ffffff; 
+    margin: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    letter-spacing: 0em;
+}
+
+/* Stijling voor de nav zodat deze gepositioneerd kan worden */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px; /* Meer ruimte boven de nav zodat de <p> er niet overheen valt */
+}
+
+/* Zorg ervoor dat het logo (h1) links in de hoek staat */
+nav h1 {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Zorgt dat de afbeelding netjes wordt uitgelijnd */
+    margin: 0px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: black; 
+    text-decoration: none; 
+}
+
+/* Afbeelding van het logo aanpassen */
+nav h1 img {
+    height: 130px;
+    width: auto;
+    display: block;
+}
+
+/* Zorg ervoor dat de <ul> elementen horizontaal worden weergegeven */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Zorgt voor wat ruimte tussen de <li> elementen */
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Optioneel: Geef een beetje ruimte aan de tweede ul */
+nav ul:last-of-type {
+    margin-left: auto;
+}
+
+/* Standaard stijlen voor iconen */
+nav ul li a img {
+    height: 24px; /* Pas de grootte van de iconen aan naar wens */
+}
+
+/* Zorg ervoor dat de sectie een flex-container is en de laatste twee links naast elkaar staan */
+section:first-of-type {
+    position: relative; /* Zorgt ervoor dat de links binnen deze sectie worden gepositioneerd */
+}
+
+
+/* Video-instellingen */
+section:first-of-type video {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* Stijl voor "Gratis oogmeting", rechtsboven in de hoek */
+section:first-of-type a:first-of-type {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    background-color: rgba(47, 38, 221, 1); /* Oorspronkelijke kleur */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex; /* Zorg dat de SVG en tekst naast elkaar komen */
+    align-items: center; 
+    white-space: nowrap;
+    z-index: 2; /
+}
+
+/* Specifieke stijl voor SVG's binnen de "Boek een oogmeting" link */
+section:first-of-type a:first-of-type svg {
+    width: 15px; /* Pas de grootte van de SVG aan */
+    height: 15px;
+}
+
+/* Stijl voor de laatste twee links onderaan de video */
+section:first-of-type {
+    position: relative; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+/* Stijl voor de links "Meet the Tatemans" en "Shop de collectie" */
+section:first-of-type a:nth-of-type(2),
+section:first-of-type a:nth-of-type(3) {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); /* Zorgt ervoor dat de links gecentreerd zijn */
+    display: flex; 
+    gap: 10px; /* Ruimte tussen de links */
+    z-index: 2; /* Zorg ervoor dat dit element boven de video ligt */
+}
+
+/* Stijl voor de links "Meet the Tatemans" en "Shop de collectie" */
+section:first-of-type a:nth-of-type(2),
+section:first-of-type a:nth-of-type(3) {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex; 
+    gap: 10px; 
+    z-index: 2; 
+}
+
+/* Specifieke stijl voor de individuele links */
+section:first-of-type a:nth-of-type(2),
+section:first-of-type a:nth-of-type(3) {
+    color: #000000; /* Kleur van de tekst */
+    background-color: #FFF200; /* Achtergrondkleur van de link */
+    padding: 12px 20px; 
+    text-decoration: none;
+    border-radius: 9999px;
+    transition: background-color 150ms ease-out; /* Effect voor hover */
+}
+
+/* Hover-effect voor de laatste twee links */
+section:first-of-type a:nth-of-type(2):hover,
+section:first-of-type a:nth-of-type(3):hover {
+    background-color: #fff30f; 
+}
+
+/* Optionele hover-stijlen voor "Gratis oogmeting" */
+section:first-of-type a:first-of-type:hover {
+    background-color: rgba(47, 38, 221, 0.5);
+    transition: background-color 150ms ease-out;
+}
+section:nth-of-type(2) {
+    display: flex; /* Zorg ervoor dat de afbeeldingen naast elkaar staan */
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+
+section:nth-of-type(2) img {
+    width: 50%; /* Laat de afbeeldingen bijna de helft van de sectie innemen */
+    height: auto; 
+}
+
+section:nth-of-type(2) p {
+    position: absolute; 
+    color: white;
+    z-index: 2; 
+    font-size: 24px;
+    text-align: center; 
+    width: 100%;
+}
+
+section:nth-of-type(2) p:first-of-type {
+    top: 30%; /* Positioneert de eerste <p> iets naar beneden */
+    left: 0; 
+}
+
+section:nth-of-type(2) p:last-of-type {
+    bottom: 30%; /* Positioneert de tweede <p> iets omhoog */
+    left: 0; 
+}
+
+section:nth-of-type(2) a {
+    position: absolute;
+    color: white; 
+    text-decoration: underline;
+    z-index: 2; 
+    margin: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0em;
+    font-weight: 500;
+    border: 2px solid white;
+    border-radius: 9999px;
+    padding: 12px 40px;
+    text-decoration: none;
+    
+}
+
+section:nth-of-type(2) a:first-of-type {
+    bottom: 20px; 
+    left: 20px; 
+    text-align: left; 
+    font-size: 15px; 
+    margin-left: 5px;
+}
+
+section:nth-of-type(2) a:last-of-type {
+    bottom: 20px; 
+    left: 57%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+    font-size: 15px;
+    margin-left: 28px;
+}
+
+section:nth-of-type(2) p:first-of-type {
+    top: 0; 
+    left: 0; 
+    width: auto; 
+    text-align: left; 
+    margin-left: 20px;
+    padding: 10px; 
+    font-size: 50px; 
+    color: white; 
+    z-index: 2; 
+}
+
+section:nth-of-type(2) p:last-of-type {
+    top: 0; 
+    left: 50%; 
+    transform: translateX(0); 
+    width: auto; 
+    text-align: left; 
+    margin-left: 20px;
+    padding: 10px; 
+    font-size: 50px; 
+    color: white; 
+    z-index: 2; 
+}
+
+
+
+
+
+
+
