@@ -6,6 +6,31 @@
 }
 
 
+@font-face {
+    font-family:'Ampersans' ;
+    src: url(../fonts/AmperSans-Light.woff2);
+}
+
+@font-face {
+    font-family:'Ampersans' ;
+    src: url(../fonts/AmperSans-Medium.woff2);
+}
+
+@font-face {
+    font-family:'Ampersans' ;
+    src: url(../fonts/AmperSans-Regular.woff2);
+}
+
+@font-face {
+    font-family:'ATArizona' ;
+    src: url(../fonts/ATArizonaSerif-Medium.woff);
+}
+
+@font-face {
+    font-family:'ATArizona' ;
+    src: url(../fonts/ATArizonaSerif-Regular.woff2);
+}
+
 
 
 
@@ -15,12 +40,21 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:#ffffff;
+	--color-background:#000000;
 }
 
+@media (prefers-color-scheme:dark) {
+    :root {
+        /* startje */
+        --color-text:#eee;
+        --color-background:#111;
+        --color-background-button: rgb(47, 38, 221); 
+        --color-background-button: #FFF200;
+    }
+}
 
-
+/* font size toevoegen aan root  */
 
 
 /****************/
@@ -34,21 +68,27 @@ body {
     padding: 0;
 }
 
+header {
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
 /* Zorgt ervoor dat de <p> helemaal bovenaan de pagina komt */
 header p {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #000000; /* Optionele achtergrondkleur */
-    padding: 10px;
+    background-color: var(--color-background); /* Optionele achtergrondkleur */
+    padding: 0.63em;
     width: 100%;
     text-align: center;
     z-index: 1; /* Zorgt dat <p> boven andere elementen staat */
-    color: #ffffff; 
-    margin: 0px;
-    font-size: 12px;
-    line-height: 20px;
+    color: var(--color-text); 
+    margin: 0;
+    font-size: 0.75em;
+    line-height: 1.25em;
     font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
     letter-spacing: 0em;
@@ -59,10 +99,10 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5px; /* Meer ruimte boven de nav zodat de <p> er niet overheen valt */
+    margin-top: 0.31em; /* Meer ruimte boven de nav zodat de <p> er niet overheen valt */
 }
 
-/* Zorg ervoor dat het logo (h1) links in de hoek staat */
+/* Zorgt ervoor dat het logo (h1) links in de hoek staat */
 nav h1 {
     margin: 0;
     padding: 0;
@@ -72,9 +112,9 @@ nav a {
     text-decoration: none;
     display: flex;
     align-items: center; /* Zorgt dat de afbeelding netjes wordt uitgelijnd */
-    margin: 0px;
-    font-size: 16px;
-    line-height: 24px;
+    margin: 0;
+    font-size: 1.00em;
+    line-height: 1.50em;
     font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
     letter-spacing: -0.015em;
@@ -82,14 +122,15 @@ nav a {
     text-decoration: none; 
 }
 
+
 /* Afbeelding van het logo aanpassen */
 nav h1 img {
-    height: 130px;
+    height: 5em;
     width: auto;
     display: block;
 }
 
-/* Zorg ervoor dat de <ul> elementen horizontaal worden weergegeven */
+/* Zorgt ervoor dat de <ul> elementen horizontaal worden weergegeven */
 nav ul {
     display: flex;
     list-style-type: none;
@@ -107,23 +148,23 @@ nav ul li a {
     color: black;
 }
 
-/* Optioneel: Geef een beetje ruimte aan de tweede ul */
+/* Geeft ruimte aan de tweede ul */
 nav ul:last-of-type {
     margin-left: auto;
 }
 
-/* Standaard stijlen voor iconen */
+/* Stijlen voor iconen */
 nav ul li a img {
-    height: 24px; /* Pas de grootte van de iconen aan naar wens */
+    height: 1.50em; /* Pas de grootte van de iconen aan naar wens */
 }
 
-/* Zorg ervoor dat de sectie een flex-container is en de laatste twee links naast elkaar staan */
+/* Zorgt ervoor dat de sectie een flex-container is en de laatste twee links naast elkaar staan */
 section:first-of-type {
     position: relative; /* Zorgt ervoor dat de links binnen deze sectie worden gepositioneerd */
 }
 
 
-/* Video-instellingen */
+/* Video */
 section:first-of-type video {
     width: 100%;
     height: auto;
@@ -134,28 +175,28 @@ section:first-of-type video {
 
 /* Stijl voor "Gratis oogmeting", rechtsboven in de hoek */
 section:first-of-type a:first-of-type {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed;  /* Zorgt ervoor dat de link sticky is */
+    top: 6em;
+    right:3em;
     color: white;
-    background-color: rgba(47, 38, 221, 1); /* Oorspronkelijke kleur */
-    padding: 10px 20px;
+    background-color: rgb(47, 38, 221); /* Oorspronkelijke kleur */
+    padding: 0.63em 1.25em;
     text-decoration: none;
-    border-radius: 9999px;
+    border-radius: 624.94em;
     font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    gap: 8px;
-    font-size: 14px;
-    line-height: 20px;
-    display: flex; /* Zorg dat de SVG en tekst naast elkaar komen */
+    gap: 0.50em;
+    font-size: 0.88em;
+    line-height: 1.25em;
+    display: flex; 
     align-items: center; 
     white-space: nowrap;
-    z-index: 2; /
+    z-index: 2; 
 }
 
-/* Specifieke stijl voor SVG's binnen de "Boek een oogmeting" link */
+/* Stijl voor SVG's binnen de "Boek een oogmeting" link */
 section:first-of-type a:first-of-type svg {
-    width: 15px; /* Pas de grootte van de SVG aan */
-    height: 15px;
+    width: 0.94em; /* Pas de grootte van de SVG aan */
+    height: 0.94em;
 }
 
 /* Stijl voor de laatste twee links onderaan de video */
@@ -164,30 +205,30 @@ section:first-of-type {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    gap: 10px; 
+    gap: 0.63em; 
 }
 
 /* Stijl voor de links "Meet the Tatemans" en "Shop de collectie" */
 section:first-of-type a:nth-of-type(2),
 section:first-of-type a:nth-of-type(3) {
     position: absolute; 
-    bottom: 20px; 
+    bottom: 1.25em; 
     left: 50%; 
-    transform: translateX(-50%); /* Zorgt ervoor dat de links gecentreerd zijn */
+    transform: translateX(-50%); 
     display: flex; 
-    gap: 10px; /* Ruimte tussen de links */
-    z-index: 2; /* Zorg ervoor dat dit element boven de video ligt */
+    gap: 0.63em; 
+    z-index: 2; 
 }
 
 /* Stijl voor de links "Meet the Tatemans" en "Shop de collectie" */
 section:first-of-type a:nth-of-type(2),
 section:first-of-type a:nth-of-type(3) {
     position: absolute; 
-    bottom: 20px; 
+    bottom: 1.25em; 
     left: 50%;
     transform: translateX(-50%); 
     display: flex; 
-    gap: 10px; 
+    gap: 0.63em; 
     z-index: 2; 
 }
 
@@ -196,9 +237,9 @@ section:first-of-type a:nth-of-type(2),
 section:first-of-type a:nth-of-type(3) {
     color: #000000; /* Kleur van de tekst */
     background-color: #FFF200; /* Achtergrondkleur van de link */
-    padding: 12px 20px; 
+    padding: 0.75em 1.25em; 
     text-decoration: none;
-    border-radius: 9999px;
+    border-radius:624.94em;
     transition: background-color 150ms ease-out; /* Effect voor hover */
 }
 
@@ -208,11 +249,15 @@ section:first-of-type a:nth-of-type(3):hover {
     background-color: #fff30f; 
 }
 
-/* Optionele hover-stijlen voor "Gratis oogmeting" */
+/* 8 hover-stijlen voor "Gratis oogmeting" */
 section:first-of-type a:first-of-type:hover {
     background-color: rgba(47, 38, 221, 0.5);
     transition: background-color 150ms ease-out;
 }
+
+
+/* SECTION 2 */ 
+
 section:nth-of-type(2) {
     display: flex; /* Zorg ervoor dat de afbeeldingen naast elkaar staan */
     justify-content: space-between;
@@ -232,7 +277,7 @@ section:nth-of-type(2) p {
     position: absolute; 
     color: white;
     z-index: 2; 
-    font-size: 24px;
+    font-size: 1.50em;
     text-align: center; 
     width: 100%;
 }
@@ -252,44 +297,65 @@ section:nth-of-type(2) a {
     color: white; 
     text-decoration: underline;
     z-index: 2; 
-    margin: 0px;
-    font-size: 16px;
-    line-height: 20px;
+    margin: 0;
+    font-size: 1.00em;
+    line-height: 1.25em;
     font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0em;
     font-weight: 500;
-    border: 2px solid white;
-    border-radius: 9999px;
-    padding: 12px 40px;
+    border: 0.13em solid white;
+    border-radius: 624.94em;
+    padding: 0.75em 2.50em;
     text-decoration: none;
     
 }
 
 section:nth-of-type(2) a:first-of-type {
-    bottom: 20px; 
-    left: 20px; 
+    bottom: 1.25em; 
     text-align: left; 
     font-size: 15px; 
-    margin-left: 5px;
+    margin-left: 1.75em;
+    padding: 0.5em 1em; /* Optioneel: voeg padding toe om de link meer ruimte te geven */
+    border-radius: 5em; /* Maak de hoeken afgerond */
+    background-color: white;
+    color: #000;
+    transition: border-color 0.3s ease; /* Maak de overgang soepel */
+}
+
+section:nth-of-type(2) a:first-of-type:hover {
+    background-color: rgba(255, 255, 255, 0.75); /* Maak de achtergrond licht transparant bij hover */
+    color: black; 
 }
 
 section:nth-of-type(2) a:last-of-type {
-    bottom: 20px; 
-    left: 57%; 
-    transform: translateX(-50%); 
-    text-align: center; 
-    font-size: 15px;
-    margin-left: 28px;
+    bottom: 1.25em;
+    left: 58%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.94em;
+    padding: 0.5em 1em; /* Optioneel: voeg padding toe om de link meer ruimte te geven */
+    border-radius: 5em; /* Maak de hoeken afgerond */
+    background-color: white;
+    color: #000;
+    transition: border-color 0.3s ease; /* Maak de overgang soepel */
 }
+
+
+
+/* Hover-effect voor de laatste link in sectie 2 */
+section:nth-of-type(2) a:last-of-type:hover {
+    background-color: rgba(255, 255, 255, 0.75); /* Maak de achtergrond licht transparant bij hover */
+    color: black; 
+}
+
 
 section:nth-of-type(2) p:first-of-type {
     top: 0; 
     left: 0; 
     width: auto; 
     text-align: left; 
-    margin-left: 20px;
-    padding: 10px; 
-    font-size: 50px; 
+    padding: 0.63em; 
+    font-size: 3.13em; 
     color: white; 
     z-index: 2; 
 }
@@ -300,16 +366,796 @@ section:nth-of-type(2) p:last-of-type {
     transform: translateX(0); 
     width: auto; 
     text-align: left; 
-    margin-left: 20px;
-    padding: 10px; 
-    font-size: 50px; 
+    padding: 0.63em; 
+    font-size: 3.13em; 
     color: white; 
     z-index: 2; 
+}
+
+section:nth-of-type(3) {
+    clear: both; 
+    position: relative; 
+    margin-top: 0; 
+    padding: 0; 
+}
+
+section:nth-of-type(3) h2 {
+    font-family: 'ATArizona', 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 3.125em; 
+    padding: 0.5em 0.6em; 
+    margin: 0; 
+    position: relative; 
+    background-color: #F0F0F0;
+}
+
+section:nth-of-type(3) h2::after {
+    content: ""; /* Leeg inhoudselement */
+    display: block; 
+    width: 100%; 
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    z-index: 1; 
+}
+
+section:nth-of-type(3) ul {
+    display: flex; 
+    flex-wrap: wrap;
+    padding: 0; 
+    margin: 0;
+    list-style: none; 
+}
+
+section:nth-of-type(3) li {
+    position: relative;
+    flex: 1 1 200px; 
+    margin: 0; 
+    text-align: center; 
+}
+
+section:nth-of-type(3) img {
+    width: 100%;
+    height: 400px; 
+    display: block; 
+    margin: 0; 
+}
+
+section:nth-of-type(3) p {
+    position: absolute; 
+    bottom: 10px; 
+    color: rgb(0, 0, 0);
+}
+
+section:nth-of-type(3) p:nth-of-type(1) {
+    left: 10px; 
+    text-align: left; 
+}
+
+section:nth-of-type(3) p:nth-of-type(2) {
+    right: 10px;
+    bottom: 10px; 
+    text-align: right; 
+}
+
+
+/* 4e sectie */
+section:nth-of-type(4) {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+section:nth-of-type(4) ul {
+    display: flex; /* Flex-container om de items horizontaal te plaatsen */
+    flex-wrap: nowrap; 
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    width: 100vw; 
+    overflow-x: hidden;
+}
+
+section:nth-of-type(4) li {
+    position: relative;
+    text-align: center;
+    flex: 1 1 33.33%; 
+    max-width: 33.33%; 
+    box-sizing: border-box;
+}
+
+section:nth-of-type(4) img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+/* Stijl voor de p-tekst bovenaan links uitgelijnd */
+section:nth-of-type(4) p {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 0.5em;
+    color: white;
+    font-family: 'ATArizona', 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 3.125em;
+}
+
+/* Stijl voor de a-tekst onderaan de afbeelding */
+section:nth-of-type(4) a {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    margin: 0;
+    padding: 0.75em 2.50em;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0em;
+    font-weight: 500;
+    border-radius: 624.94em;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+/* Hover-effect voor de a-tekst */
+section:nth-of-type(4) a:hover {
+    background-color: rgba(255, 255, 255, 0.75); /* Maakt de achtergrond licht transparant bij hover */
+    color: black; 
+}
+
+
+
+/* BESTELLER SECTION 5 */
+
+/* Algemeen styling voor de 5e grid-sectie */
+section:nth-of-type(5) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+    grid-template-rows: repeat(3, 1fr); /* 3 rijen, gelijke hoogte aan breedte */
+    gap: 0; 
+    width: 100vw; /* Volledige breedte van het scherm */
+    height: auto; 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+section:nth-of-type(5) h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 0.5em;
+    color: black;
+    font-family: 'ATArizona', 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 3.125em;
+}
+
+/* Zorg dat de ul en li geen extra ruimte nemen in section 5 */
+section:nth-of-type(5) ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: contents; /* Laat <li> direct in de grid komen */
+}
+
+
+section:nth-of-type(5) li {
+    background-color: #F0F0F0;
+    position: relative; /* Voor het positioneren van tekst boven de afbeelding */
+    width: 100%; /* Vult de breedte van de kolom */
+    height: 0; /* Start met een hoogte van 0 */
+    padding-bottom: 100%; /* Zorgt ervoor dat de hoogte gelijk is aan de breedte (vierkant) */
+    border: 0.8px solid rgb(0, 0, 0); 
+    box-sizing: border-box; /* Zorgt ervoor dat de padding en border binnen de breedte en hoogte vallen */
+}
+
+/* Zorgt dat de tekst over de afbeeldingen komt */
+section:nth-of-type(5) li a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Vult de hoogte van de kolom */
+    text-align: center;
+    color: white; 
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+section:nth-of-type(5) li:first-child p {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0em;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #555; /* Huidige borderkleur */
+    padding: 0.75em 2.50em;
+    border-radius: 624.94em; 
+}
+
+/* Hover-effect voor het p-element in de vijfde sectie */
+section:nth-of-type(5) li:first-child p:hover {
+    border-color: #ccc; /* Verandert de borderkleur naar een lichtere kleur bij hover */
+}
+
+
+
+/* Maak de afbeeldingen vierkant en zonder witruimte */
+section:nth-of-type(5) img {
+    width: 100%; /* Vult de breedte van de cel volledig */
+    height: 100%; /* Vult de hoogte van de cel volledig */
+    object-fit: cover; /* Vult de kolom zonder de verhoudingen te vervormen */
+    margin: 0; 
+    padding: 0; 
+}
+
+/* Specifieke grid positionering in section 5 */
+
+/* Kolom 1: Bestsellers */
+section:nth-of-type(5) li:nth-child(1) {
+    grid-column: 1 / 2; /* Kolom 1 */
+    grid-row: 1; /* Eerste rij */
+}
+
+/* Kolom 2: Neil afbeelding */
+section:nth-of-type(5) li:nth-child(2) {
+    grid-column: 2 / 3; /* Kolom 2 */
+    grid-row: 1; /* Eerste rij */
+}
+
+/* Kolom 3: Lily afbeelding */
+section:nth-of-type(5) li:nth-child(3) {
+    grid-column: 3 / 4; /* Kolom 3 */
+    grid-row: 1; /* Eerste rij */
+}
+
+/* Kolom 2 en 3 (over 2 rijen): Pierce afbeelding */
+section:nth-of-type(5) li:nth-child(4) {
+    grid-column: 2 / 4; /* Neemt kolom 2 en 3 */
+    grid-row: 2 / 4; /* Neemt twee rijen in beslag */
+}
+
+/* Kolom 1: Alfred (onder Bestsellers in kolom 1) */
+section:nth-of-type(5) li:nth-child(5) {
+    grid-column: 1 / 2; /* Alfred in kolom 1 */
+    grid-row: 2; /* Tweede rij */
+}
+
+/* Kolom 1: Monty (onder Alfred in kolom 1) */
+section:nth-of-type(5) li:nth-child(6) {
+    grid-column: 1 / 2; /* Monty in kolom 1 */
+    grid-row: 3; /* Derde rij */
+}
+
+/* Algemene tekst-styling */
+section:nth-of-type(5) li a h2, section:nth-of-type(5) li a p {
+    margin: 0;
+    color: white; 
+    font-size: 1.2rem; 
+    font-weight: bold; /
+}
+
+section:nth-of-type(5) li a p {
+    font-size: 1rem; 
+}
+
+
+
+/* SECTION 6 YOU MAKE US LOOK GOOD*/
+
+section:nth-of-type(6) {
+    margin: 0; 
+    padding: 0;
+    position: relative; 
+}
+
+/* H2 styling */
+section:nth-of-type(6) h2 {
+    font-family: 'ATArizona', 'Times New Roman', Times, serif; 
+    font-weight: lighter;
+    font-size: 3.125em; 
+    padding: 0.5em 0.6em; 
+    margin: 0; 
+    position: relative; 
+    background-color: #F0F0F0; 
+}
+
+/* Onderstreping van h2 */
+section:nth-of-type(6) h2::after {
+    content: ""; 
+    display: block; 
+    width: 100%; 
+    height: 1px; 
+    background-color: black; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 1; 
+}
+
+/* Flexbox voor het uitlijnen van items */
+section:nth-of-type(6) ul {
+    display: flex; 
+    flex-wrap: wrap; 
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+    width: 100%; 
+}
+
+/* Li-element styling */
+section:nth-of-type(6) li {
+    flex: 1 1 25%; 
+    max-width: 25%; 
+    position: relative; 
+    box-sizing: border-box; 
+}
+
+/* Afbeeldingen styling */
+section:nth-of-type(6) li img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Tekst bovenop de afbeeldingen */
+section:nth-of-type(6) li p {
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    right: auto; 
+    margin: 0; 
+    padding: 10px; 
+    color: white; 
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 1em; 
+
+}
+
+/* Verwijdert witruimte tussen de afbeeldingen en h2 */
+section:nth-of-type(6) ul {
+    gap: 0; 
+}
+
+/* Zorgt ervoor dat de afbeeldingen dezelfde grootte hebben */
+section:nth-of-type(6) li {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Standaard hoogte voor alle afbeeldingen */
+section:nth-of-type(6) li img {
+    height: 100%; 
+}
+
+section:nth-of-type(6) {
+    margin: 0;
+    padding: 0; 
+    position: relative; 
+    background-color: #F0F0F0; 
+    width: 100%; 
+    overflow: hidden; 
+}
+
+/* H2 styling */
+section:nth-of-type(6) h2 {
+    font-family: 'ATArizona', 'Times New Roman', Times, serif; 
+    font-weight: lighter; 
+    font-size: 3.125em; 
+    padding: 0.5em 0.6em; /* Ruimte rondom de tekst */
+    margin: 0;
+    position: relative; 
+}
+
+/* Onderstreping van h2 */
+section:nth-of-type(6) h2::after {
+    content: ""; 
+    display: block; 
+    width: 100%; 
+    height: 1px; 
+    background-color: black; /* Kleur van de streep */
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    z-index: 1; /* Zorgt ervoor dat het boven andere elementen verschijnt */
+}
+
+/* Flexbox voor het uitlijnen van items */
+section:nth-of-type(6) ul {
+    display: flex; 
+    flex-wrap: wrap;
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
+    width: 100%; 
+}
+
+/* Li-element styling */
+section:nth-of-type(6) li {
+    flex: 1 1 25%;
+    max-width: 25%; 
+    position: relative; 
+    box-sizing: border-box; 
+}
+
+/* Afbeeldingen styling */
+section:nth-of-type(6) li img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* Tekst bovenop de afbeeldingen */
+section:nth-of-type(6) li p {
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    right: auto; /* Laat 'right' niet meer auto, zodat het p-element niet naar rechts uitgelijnd is */
+    margin: 0; 
+    padding: 10px; 
+    color: white; 
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Lettertype */
+    font-size: 1em; 
+}
+
+/* Verwijder witruimte tussen de afbeeldingen en h2 */
+section:nth-of-type(6) ul {
+    gap: 0; 
+}
+
+/* Zorg ervoor dat de afbeeldingen dezelfde grootte hebben */
+section:nth-of-type(6) li {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Standaard hoogte voor alle afbeeldingen */
+section:nth-of-type(6) li img {
+    height: 100%; 
+}
+
+
+/* SECTION 7 BEKIJK ONZE COLLECTIE */
+section:nth-of-type(7) {
+    background-color: #D7EBC3; 
+    padding: 20px; 
+    margin: 0; 
+    color: black; 
+}
+
+/* H2 styling */
+section:nth-of-type(7) h2 {
+    font-family: "AmperSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px; 
+    font-weight: lighter; 
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px; 
+}
+
+/* UL styling */
+section:nth-of-type(7) ul {
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+}
+
+/* Li-element styling */
+section:nth-of-type(7) li {
+    display: inline; 
+    margin-right: 10px; 
+    position: relative; /* Voor positionering van de afbeelding */
+}
+
+/* Link styling */
+section:nth-of-type(7) a {
+    text-decoration: none; 
+    color: black; /* Zwarte kleur voor links */
+    font-family: 'ATArizona', 'Times New Roman', Times, serif; 
+    font-weight: lighter; /* Lichtere lettertype gewicht */
+    font-size: 3.5em; 
+}
+
+/* Toont de afbeelding alleen bij hover over het li-element */
+section:nth-of-type(7) li img {
+    display: none; /* Standaard verbergen */
+}
+
+section:nth-of-type(7) li:hover img {
+    display: inline; /* Toont afbeelding bij hover */
+    position: absolute; 
+    top: 100%; /* Plaats de afbeelding net onder het li-element */
+    left: 0; 
+    z-index: 1; /* Zorgt ervoor dat het boven andere elementen komt */
+    width: 300px;
+    height: auto; 
+    border-radius: 10px;
+}
+
+/* Kleinere link styling */
+section:nth-of-type(7) a:last-of-type {
+    font-size: 2em; /* Maakt de laatste 'Bekijk alles' link groter */
+    font-weight: normal; /* Zorgt ervoor dat de link niet vetgedrukt is */
+}
+
+/* Extra styling voor links */
+section:nth-of-type(7) a {
+    padding: 2px 5px; /* Voegt wat ruimte rondom de tekst toe */
+    border-radius: 5px; /* Maakt de hoeken van de links afgerond */
+    transition: background-color 0.3s; /* Maakt de achtergrondkleur animatie soepel */
+}
+
+section:nth-of-type(7) p {
+    margin: 0; 
+    padding: 10px;
+    margin-top: 3em;
+    font-size: 16px; 
+    line-height: 20px; 
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    letter-spacing: 0em; 
+    font-weight: 500; 
+    border: 1px solid #4B4B4B; /* Huidige borderkleur */
+    border-radius: 5em; 
+    text-align: center; 
+    width: 10em; 
+}
+
+/* Hover-effect voor het p-element */
+section:nth-of-type(7) p:hover {
+    border-color: #c9c9c9 /* Verandert de borderkleur naar wit bij hover */
 }
 
 
 
 
 
+/* SECTION 8 EVERYDAY ICONS */
+
+/* Zorgt dat de 8e section over de gehele breedte gaat */
+section:nth-of-type(8) {
+    width: 100vw; /* Volledige breedte van het scherm */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stijl van ul om de items naast elkaar te zetten */
+section:nth-of-type(8) ul {
+    display: flex; /* Flexbox om de items naast elkaar te plaatsen */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; 
+}
+
+/* Zorgt ervoor dat de li-items de helft van het scherm innemen */
+section:nth-of-type(8) li {
+    position: relative; /* Relatief voor de absolute positionering van de tekst */
+    width: 50%; /* Elk item neemt 50% van de breedte in */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Verbergt alles wat buiten het element valt */
+}
+
+/* Zorgt dat de afbeeldingen 100% van hun container innemen */
+section:nth-of-type(8) li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Positioneert de tekst over de afbeelding */
+section:nth-of-type(8) li p {
+    position: absolute; /* Absolute positionering voor tekst over de afbeelding */
+    top: 1.25em; 
+    left: 1.25em; 
+    color: white; 
+}
+
+/* Aanpassen van de tekst en link */
+section:nth-of-type(8) li p {
+    font-size: 3.2em; 
+    margin: 0;
+}
+
+/* Standaard styling voor de link */
+section:nth-of-type(8) li a {
+    position: absolute;
+    bottom: 1.25em; 
+    left: 1.25em; 
+    text-decoration: none;
+    color: #000;
+    font-family: "AmperSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 0.625em 1.875em; 
+    font-size: 1em; 
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Een transition voor een soepele overgang */
+}
+
+/* Hover effect om de link transparant te maken */
+section:nth-of-type(8) li a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Maakt de achtergrond half-transparant */
+    opacity: 0.8; /* Verlaagt de opacity voor een licht transparant effect */
+}
+
+/* SECTION 9 FORMULIER */
+
+/* Stijl voor de 9e section */
+section:nth-of-type(9) {
+    border-top: 0.0625em solid rgb(0, 0, 0); /* 1px */
+    background-color: rgb(234, 226, 220); 
+    color: rgb(0, 0, 0); 
+    display: flex;
+    flex-direction: column; /* Kolom-indeling voor elementen */
+    align-items: flex-start; /* Centreert alle elementen aan de linkerkant uit */
+    padding: 1.25em; 
+}
+
+/* H2 styling voor de nieuwsbrief */
+section:nth-of-type(9) h2 {
+    color: black; 
+    font-family: 'ATArizona', 'Times New Roman', Times, serif; 
+    font-weight: lighter;
+    font-size: 2.5em; 
+    margin-bottom: 0.9375em; 
+    white-space: normal; 
+    overflow-wrap: break-word; 
+    max-width: 56.25em;
+    visibility: hidden; /* Verbergt de originele tekst visueel */
+    line-height: 0.8; /* Verkleint de ruimte tussen regels */
+}
+
+/* Eerste regel */
+section:nth-of-type(9) h2::before {
+    content: "Meld je aan voor onze nieuwsbrief voor de laatste";
+    display: block; /* Nieuwe regel */
+    margin: 0; 
+    padding: 0; 
+    visibility: visible;
+}
+
+/* Tweede regel */
+section:nth-of-type(9) h2::after {
+    content: "Ace & Tate updates.";
+    display: block; /* Nieuwe regel */
+    margin: 0; 
+    padding: 0;
+    visibility: visible;
+}
 
 
+/* Stijl voor het formulier en invoerveld */
+section:nth-of-type(9) form {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.200em;
+    width: 100%;
+}
+
+/* Checkbox-label styling corrigeren */
+section:nth-of-type(9) label {
+    display: flex;
+    align-items: flex-start; /* Zorgt ervoor dat de items bovenaan worden uitgelijnd */
+    gap: 8px; /* Ruimte tussen checkbox en tekst */
+    margin: 0px;
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 0em;
+    margin-bottom: 1.5em;
+}
+
+section:nth-of-type(9) input[type="text"] {
+    width: 50em;
+    height: 3em;
+}
+
+
+/* Zorgt ervoor dat de checkbox links is uitgelijnd */
+section:nth-of-type(9) input[type="checkbox"] {
+    align-self: flex-start;
+    margin-right: 0.5em; 
+}
+
+
+/* Stijl voor de submit-knop */
+section:nth-of-type(9) button {
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0em;
+    font-weight: 500;
+    width: 8em;
+    background-color: #000; /* Zwarte achtergrond voor de knop */
+    color: #fff; 
+    padding: 0.625em 1.25em; 
+    border: none; 
+    cursor: pointer;
+    font-size: 1em; 
+    border-radius: 4em;
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect voor de knop */
+section:nth-of-type(9) button:hover {
+    background-color: rgb(50, 50, 50); /* Donkere grijsachtige tint bij hover */
+}
+
+/* FOOTER */
+footer {
+    background: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    padding: 1.5em; 
+    display: flex; 
+    flex-direction: column; /* zorgt dat de kinderen verticaal  staan*/
+}
+
+footer h3 {
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em; 
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-align: left; 
+    margin-bottom: 1em; 
+}
+
+footer .ul-container {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+footer ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    flex: 1; 
+}
+
+footer ul li {
+    margin-bottom: 0.75em; 
+    text-align: left; 
+}
+
+footer ul li img {
+    margin-left: 0.5em; 
+}
+
+footer ul li a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+}
+
+footer ul li a:hover {
+    text-decoration: underline; 
+}
+
+footer ul:nth-of-type(1) {
+    display: block; 
+    text-align: left; 
+}
+
+footer ul:nth-of-type(1) li {
+    display: flex;
+}
+    
+    
