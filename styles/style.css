@@ -6,30 +6,6 @@
 }
 
 
-@font-face {
-    font-family:'Ampersans' ;
-    src: url(../fonts/AmperSans-Light.woff2);
-}
-
-@font-face {
-    font-family:'Ampersans' ;
-    src: url(../fonts/AmperSans-Medium.woff2);
-}
-
-@font-face {
-    font-family:'Ampersans' ;
-    src: url(../fonts/AmperSans-Regular.woff2);
-}
-
-@font-face {
-    font-family:'ATArizona' ;
-    src: url(../fonts/ATArizonaSerif-Medium.woff);
-}
-
-@font-face {
-    font-family:'ATArizona' ;
-    src: url(../fonts/ATArizonaSerif-Regular.woff2);
-}
 
 
 
@@ -47,15 +23,49 @@
 @media (prefers-color-scheme:dark) {
     :root {
         /* startje */
-        --color-text:#eee;
-        --color-background:#111;
-        --color-background-button: rgb(47, 38, 221); 
-        --color-background-button: #FFF200;
-        --color-background-hover:rgba(255, 255, 255, 0.5);
-        --color-background-collectie: #D7EBC3;
-        --color-background-overons:#fcd792;
+        --color-white:#eee;
+        --color-black:black;
+        --color-background-black:#111;
+        --color-header-text:black; 
+        --color-text:#fff; 
+        --color-darkmode:#1c1c1c;
+        --color-header-background-p:#111;
+        --color-background2:#262626;
+        --color-button-blauw: rgb(47, 38, 221); 
+        --color-background-button-geel: #FFF200;
+        --color-hover: #efecc0;
+        --color-button-hover:rgba(255, 255, 255, 0.75);
+        --color-background-hover-grijs:rgba(255, 255, 255, 0.5);
+        --color-background-collectie-achtergrond: #D7EBC3;
+        --color-background-overons-achtergrond:#fcd792;
 
     }
+
+    @font-face {
+        font-family:'Ampersans' ;
+        src: url(../fonts/AmperSans-Light.woff2);
+    }
+    
+    @font-face {
+        font-family:'Ampersans' ;
+        src: url(../fonts/AmperSans-Medium.woff2);
+    }
+    
+    @font-face {
+        font-family:'Ampersans' ;
+        src: url(../fonts/AmperSans-Regular.woff2);
+    }
+    
+    @font-face {
+        font-family:'ATArizona' ;
+        src: url(../fonts/ATArizonaSerif-Medium.woff);
+    }
+    
+    @font-face {
+        font-family:'ATArizona' ;
+        src: url(../fonts/ATArizonaSerif-Regular.woff2);
+    }
+    
 }
 
 
@@ -70,174 +80,410 @@ body {
     padding: 0;
 }
 
+
 /* Dark mode styling */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark){
+ 
     body {
-      background-color: #121212;
-      color: #ffffff;
-    }
-  }
-
-header {
-    position: relative;
-    top:0;
-    z-index: 1;
-}
-
-
-
-/* Algemene header stijlen */
-header {
-    position: relative;
-    width: 100%;
-    background-color: #fff;
-    padding: 0;
-    margin: 0;
-}
-
-header p {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.63em;
-    width: 100%;
-    text-align: center;
-    font-size: 0.75em;
-    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    color: #c9c9c9;
-    background-color:#000
-}
-
-/* Desktop-specifieke stijlen */
-@media (min-width: 1024px) {
-    /* Verberg de mobiele navigatie */
-    .mobile-nav {
-        display: none;
+        background-color: #000000!important; /* Donkere achtergrond voor dark mode */
+      
     }
 
-    /* Desktop navigatiestijlen */
-    nav.desktop-nav {
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
+    header p {
+    color: var(--color-white); 
+   
+    }
+    
+    header { 
+        background-color:var(--color-darkmode)!important;  
     }
 
-    nav.desktop-nav h1 {
-        margin: 0;
-        padding: 0;
+    
+   
+    header button{
+        filter: invert(1);
     }
 
-    nav.desktop-nav a {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        font-size: 1em;
-        line-height: 1.5em;
-        font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 500;
-        color: black;
+    
+
+    header a h1 img {
+        filter: invert(1); /* Omkeert kleuren, maakt zwart wit */
     }
 
-    nav.desktop-nav h1 img {
-        height: 5em;
-        width: auto;
-        display: block;
+    nav  a {
+        filter: invert(1);
     }
 
-    /* Horizontale uitlijning van links en iconen */
-    nav.desktop-nav .nav-links,
-    nav.desktop-nav .nav-icons {
-    display: flex;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+    nav button   {
+        filter: invert(1);
     }
 
-    nav.desktop-nav .nav-links li,
-    nav.desktop-nav .nav-icons li {
-        margin-right: 20px;
-    }
-
-    nav.desktop-nav .nav-icons li:last-child {
-        margin-right: 0;
-    }
-
-    nav.desktop-nav ul li a {
-        text-decoration: none;
-        color: black;
-    }
-
-    nav.desktop-nav .nav-icons li a img {
-        height: 1.5em;
-    }
-}
-
-/* Mobiele CSS */
-@media (max-width: 1024px) {
-    .desktop-nav {
-        display: none;
-    }
-
-    .top-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 20px;
+    nav li button {
+        background:none;   
     }
 
     .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        z-index: 9;
-        padding-top: 2em;
+        filter: invert(1);
     }
 
-    .overlay .bottom-nav {
+    header > nav:nth-of-type(2) {
+        order: 1;
+        width: 100%;
+        background-color: var(--color-darkmode)!important;
+    }
+
+        section:nth-of-type(1) video{
+            filter: brightness(0.8);
+        }
+
+        section:nth-of-type(2) {
+            filter: brightness(0.8);
+
+        }
+
+        section h2{
+            filter: brightness(0.8);
+            filter: invert(1); 
+        }
+
+        section:nth-of-type(3) {
+            filter: brightness(0.8);
+
+        }
+        section:nth-of-type(4) {
+            filter: brightness(0.8);
+
+        }
+        section:nth-of-type(5) {
+            filter: brightness(0.8);
+
+        }
+
+        section:nth-of-type(6) {
+            filter: brightness(0.8);
+
+        }
+
+        section:nth-of-type(7) {
+            filter: brightness(0.8);
+
+        }
+
+        section:nth-of-type(9) h2 {
+            color: white!important; 
+            }
+
+        section:nth-of-type(7) h2 {
+           color: #000;
+        }
+        section:nth-of-type(8) {
+            filter: brightness(0.8);
+        }
+
+        section:nth-of-type(9) {
+        filter: invert(1);
+        }
+
+        section:nth-of-type(9) h2 {
+            color: var(--color-white)!important; 
+            }
+}
+
+/* HIER BEGINT DE HEADER */
+
+/* Algemene stijlen voor de header */
+header {
+    padding-left: 0;
+    margin-left: 0;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--color-white);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+header button{
+    border:none;
+    background-color: var(--color-white);
+}
+
+/* Logo */
+header  a {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 20;
+    position: relative;
+}
+
+header > a > h1 > img {
+    display: block;
+}
+
+header h1 {
+    margin-top: 0;
+    margin-left: 0.1em;
+    width: 3em;
+}
+
+/* Hamburgerknop */
+header > button {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    display: block;
+    width: 2em;
+    height: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 30;
+}
+
+header > button::before,
+header > button::after,
+header > button span {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 0.1em;
+    background-color: var(--color-background);
+    border-radius: 0.1em;
+    position: absolute;
+    left: 1em;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header > button::before {
+    top: 0;
+}
+
+header > button::after {
+    bottom: 0;
+}
+
+header > button span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Hamburgerknop open animatie */
+header > button.open::before {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+header > button.open::after {
+    transform: translateY(-50%) rotate(45deg);
+    opacity: 0;
+}
+
+/* Hoofdmenu */
+header > nav:nth-of-type(1) {
+    position: static;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+header > nav:nth-of-type(1) ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+    margin-left: -10em;
+}
+
+header > nav:nth-of-type(1) ul a {
+    position: relative;
+    display: block;
+    padding-top: 1.5em;
+    text-decoration: none;
+    color: var(--color-background-black);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Onderlijn bij hover */
+header > nav:nth-of-type(1) ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-background);
+    transition: width 0.3s ease-in-out;
+}
+
+header > nav:nth-of-type(1) ul a:hover::after {
+    width: 100%;
+}
+
+/* Promo tekst */
+header > p {
+    order: -2;
+    padding-top: 0.5em;
+    width: 100%;
+    height: 2em;
+    margin: 0;
+    background-color: var(--color-header-background-p);
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 200;
+    color: var(--color-text);
+}
+
+/* Hot links */
+header > nav:nth-of-type(2) {
+    order: 1;
+    width: 100%;
+    background-color:var(--color-white);
+}
+
+header > nav:nth-of-type(2) ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header > nav:nth-of-type(2) ul a {
+    display: block;
+    padding: 0.5em;
+    color: var(--color-background-black);
+    text-decoration: none;
+}
+
+/* Service nav */
+header > nav:nth-of-type(3) ul {
+    padding-left: 5em;
+    margin-left: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 0.5em;
+}
+
+nav:nth-of-type(3) ul li {
+    border: none;
+}
+
+nav:nth-of-type(3) ul li img {
+    width: 2em;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+/* Responsiviteit voor Mobiel & Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Verberg standaard navigatie */
+    header > nav:nth-of-type(1) {
+        display: none;
+    }
+
+    /* Toon hamburgerknop */
+    header > button {
         display: block;
     }
 
-    .overlay .mobile-links {
-        font-size: 0.9em;
-        font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 500;
-        text-align: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
+     /* Toon de tweede navigatie op mobiel en tablet */
+     header > nav:nth-of-type(2) {
+        display: block; /* Maak de tweede navigatie zichtbaar */
     }
 
-    .overlay .mobile-links li {
-        margin: 20px 0;
+    /* Verberg de eerste navigatie op mobiel en tablet */
+    header > nav:nth-of-type(1) {
+        display: none; /* Verberg de eerste navigatie */
     }
 
-    .close-btn {
-        position: absolute;
-        top: 1em;
-        padding-left: 1em;
-        font-size: 2em;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        color: black;
-        z-index: 10;
+/* Basisstijl voor de overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Witte semi-transparante achtergrond */
+    z-index: 50;
+    display: flex; /* Maak zichtbaar */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stijlen voor de sluitknop */
+.close-btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--color-background-black); /* Zwarte tekstkleur */
+    cursor: pointer;
+}
+
+/* Stijlen voor de navigatie binnen de overlay */
+.overlay-nav {
+    list-style: none; /* Geen opsommingstekens */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Ruimte tussen items */
+    text-align: center;
+    font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Gewenste font */
+}
+
+/* Stijlen voor de navigatielinks */
+.overlay-nav li a {
+    color: var(--color-background) ;/* Zwarte tekstkleur */
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+/* Hover-effect voor links */
+.overlay-nav li a:hover {
+    color: blue; /* Hover kleur */
+}
+
+}
+
+/* Responsiviteit voor Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    /* Verberg hamburgerknop op desktop */
+    header > button {
+        display: none;
     }
+
+    header > nav:nth-of-type(2) {
+        display: none; /* Verberg standaard */
+    }
+
+    /* Overlay is niet van toepassing op desktop */
+    .overlay {
+        display: none;
+    }
+
+    /* Toon standaard navigatie op desktop */
+    header > nav:nth-of-type(1) {
+        display: flex !important;
+    }
+    /* Standaard, verberg de tweede navigatie op desktop */
+header > nav:nth-of-type(2) {
+    display: none; /* Verberg standaard */
 }
 
 
-/* Zorgt ervoor dat de sectie een flex-container is en de laatste twee links naast elkaar staan */
-section:first-of-type {
-    position: relative; /* Zorgt ervoor dat de links binnen deze sectie worden gepositioneerd */
+
 }
 
+/* SECTION 1 */
 
 /* Video */
 section:first-of-type video {
@@ -251,10 +497,10 @@ section:first-of-type video {
 /* Stijl voor "Gratis oogmeting", rechtsboven in de hoek */
 section:first-of-type a:first-of-type {
     position: fixed;  /* Zorgt ervoor dat de link sticky is */
-    top: 10em;
+    top: 15em;
     right:3em;
     color: white;
-    background-color: rgb(47, 38, 221); /* Oorspronkelijke kleur */
+    background-color:  rgb(47, 38, 221); /* Oorspronkelijke kleur */
     padding: 0.63em 1.25em;
     text-decoration: none;
     border-radius: 624.94em;
@@ -325,7 +571,7 @@ margin-bottom: 10em;
 /* Hover-effect voor de laatste twee links */
 section:first-of-type a:nth-of-type(2):hover,
 section:first-of-type a:nth-of-type(3):hover {
-    background-color: #efecc0; 
+    background-color: var(--color-hover); 
     transition: background-color 150ms ease-out;
 }
 
@@ -358,7 +604,7 @@ section:nth-of-type(2) img {
 /* De tekst wordt absoluut gepositioneerd over de afbeeldingen */
 section:nth-of-type(2) p {
     position: absolute; 
-    color: white;
+    color: var(--color-white);
     font-size: 1.50em;
     text-align: center; 
     width: 100%;
@@ -388,7 +634,7 @@ section:nth-of-type(2) p:last-of-type {
 /* Zorg ervoor dat de links absoluut gepositioneerd zijn */
 section:nth-of-type(2) a {
     position: absolute;
-    color: white; 
+    color: var(--color-white); 
     text-decoration: underline;
     margin: 0;
     font-size: 0.94em;;
@@ -396,7 +642,7 @@ section:nth-of-type(2) a {
     font-family: AmperSans, "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0em;
     font-weight: 500;
-    border: 0.13em solid white;
+    border: 0.13em solid var(--color-white);
     border-radius: 624.94em;
     padding: 0.75em 2.50em;
     text-decoration: none;
@@ -410,8 +656,8 @@ section:nth-of-type(2) a:first-of-type {
     font-size: 0.94em; 
     padding: 0.5em 1em; 
     border-radius: 5em; 
-    background-color: white;
-    color: #000;
+    background-color:white;
+    color: var(--color-background);
     transition: border-color 0.3s ease;
 }
 
@@ -502,7 +748,7 @@ section:nth-of-type(2) a:last-of-type:hover {
     }
 
     section:nth-of-type(2) a:first-of-type {
-        bottom: 1.25em;
+        bottom:26em;
         left: 2.5em; /* Zet de eerste link een beetje naar links */
     }
 
@@ -563,8 +809,6 @@ section:nth-of-type(3) h2 {
     border-bottom: 0.063em solid black; ;
 }
 
-
-
 section:nth-of-type(3) img {
     width: 100%; /* De afbeelding neemt de volledige breedte van de li in */
     height: auto;
@@ -614,7 +858,6 @@ section:nth-of-type(3) p:nth-of-type(2) {
         width: 100%;
         height: auto;
     }
-
 
     section:nth-of-type(3) p {
         bottom: -0.50em;
@@ -885,8 +1128,6 @@ section:nth-of-type(5) {
 }
 
 
-
-
 /* SECTION 6: YOU MAKE US LOOK GOOD */
 
 /* Algemene sectie styling */
@@ -1027,20 +1268,40 @@ section:nth-of-type(7) a {
     font-size: 3.5em; 
 }
 
+/* Animatie voor het zichtbaar worden van de afbeelding */
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) rotate(10deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-5px) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
 /* Toont de afbeelding alleen bij hover over het li-element */
 section:nth-of-type(7) li img {
     display: none; /* Standaard verbergen */
-}
-
-section:nth-of-type(7) li:hover img {
-    display: inline; /* Toont afbeelding bij hover */
-    position: absolute; 
+    position: absolute;
     top: 100%; /* Plaats de afbeelding net onder het li-element */
     left: 0; 
     z-index: 1; /* Zorgt ervoor dat het boven andere elementen komt */
     width: 18.75em;
     height: auto; 
     border-radius: 10px;
+    animation: none; /* Animatie wordt pas geactiveerd bij hover */
+    transition: opacity 0.3s ease;
+}
+
+/* Wanneer er over het li-element wordt gehoverd, wordt de afbeelding zichtbaar en animatie geactiveerd */
+section:nth-of-type(7) li:hover img {
+    display: inline; /* Toont afbeelding bij hover */
+    animation: fadeInMove 0.6s ease-out forwards; /* Fade-in en beweging */
 }
 
 /* Kleinere link styling */
@@ -1075,7 +1336,6 @@ section:nth-of-type(7) p {
 section:nth-of-type(7) p:hover {
     border-color: #c9c9c9 /* Verandert de borderkleur naar wit bij hover */
 }
-
 
 /* Responsive styling voor mobiele apparaten */
 @media (max-width: 768px) {
@@ -1193,7 +1453,6 @@ section:nth-of-type(8) li a:hover {
        left: 1em;
        
     }
-
     
     }
 
