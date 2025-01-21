@@ -175,6 +175,13 @@ Over ons pagina
 - Uittekenen van een grid helpt bij het proces van waar plaats ik ergens. 
  <img src="readme-images/IMG_1332.HEIC" width="375px" alt="In de les een schets gemaakt">
 
+
+ ### Laatste meeting
+
+ 
+
+
+
 </details>
 
 
@@ -214,6 +221,46 @@ Over ons pagina
 <img src="readme-images/Menu naast logo.png" width="375px" alt="screenshot hamburger menu">
 
 Het is mij niet gelukt om de hamburger menu naast het logo te plaatsen.
+
+
+ ### Laatste eindgesprek
+
+ Het vak frontend vond ik een pittig vak. Ik wilde heel graag het vak halen. Hierdoor heb ik er veel tijd aan besteed. Ik begreep dingen niet altijd even goed, doordat  ik eigenlijk "teveel code" schreef. Ik wist niet helemaal waar het fout ging als iets niet werkte. Ik heb bijvoorbeeld van de docent geleerd hoe ik doormiddel van inspecteren kan zien in de browser of iets overbodige regels zijn en hoe ik kan kijken hoe ik mijn code kan opschonen. Ik had zoveel dubbele regels of overbodige elementen in mijn css staan. Waardoor sommige elementen dan gewoon niet werkte. 
+
+  Verder heb ik aanpassingen gedaan aan het menu wat mij eerst niet gelukt was.
+
+
+  <img src="readme-images/Eindscreenshot_Menu.png" width="375px" alt="screenshot hamburger menu">
+
+  <img src="readme-images/Eindscreenshot Menu _ mobiel.png" width="375px" alt="screenshot hamburger menu">
+
+   <img src="readme-images/Ingeklapt menu.png.png" alt="uitgeklapt hamburgermenu"
+
+
+ Ik merkte dat ik bepaalde dingen met flexbox wilde oplosssen maar dit eigenlijk veel beter met een grid kon doen. Hierdoor ging ik tekst over afbeeldingen overlappen doormiddel van padding margin. Hierdoor was dit niet handig en responsive. Ik had voor ieder formaat een afbeelding met flexbox en dan de tekst erover heen met een hele grote margin en padding. Deze heb ik nu aangepast naar een grid.
+ Ik heb geleerd door een grid uit te tekenen. Zo leerde ik hoe ik de elementen in een grid moest positioneren. Door het tellen van in welk kolom en ele rijen de elementen moesten staan.
+
+  <img src="readme-images/Grid homepage.png" width="375px" alt="grid homepage">
+
+   <img src="readme-images/Grid over ons.png" width="375px" alt="grid over ons">
+
+  
+  Ik merkte dat ik weinig overzicht had in mijn code. Ik heb extra css pagina's gemaakt. Een css pagina die over de algemene lay out gaat en eentje die bij de verschillende pagina's hoorde in dit geval Home en over ons pagina. Zo had ik meer overzicht wat waarvoor was bedoeld. Verder heb ik geleerd hoe ik met custom properties moest werken. Ik heb bijvoorbeeld. 
+
+  Ik heb in de root: alle kleuren juiste benamingen gegeven. Dit hielp mij de kleuren makkelijk terug te vinden als ik (var) in de css gebruikte.
+
+  <img src="readme-images/Customproperties.pngg" width="375px" alt="grid over ons">
+
+  <img src="readme-images/Darkmode.png" width="375px" alt="grid over ons">
+
+
+  Voor responsiviteit heb ik geleerd hoe ik @media (width > )  iets kan instellen voor responsiviteit. Eerst klein beginnen en dan groot !!!!!!
+
+  Omdat ik de code iets meer begrijp ben ik het iets leuker gaan vinden. Ik merkte dat ik in paniek raakte zodra iets niet werkte. Maar sinds de docent heeft laten zien hoe ik code kan opschonen kan ik zelf ook sneller zien waardoor iets niet werkt dus geen rede voor paniek meer!
+
+  
+  
+
 
 </details>
 
