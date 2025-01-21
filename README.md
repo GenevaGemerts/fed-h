@@ -230,11 +230,21 @@ Het is mij niet gelukt om de hamburger menu naast het logo te plaatsen.
   Verder heb ik aanpassingen gedaan aan het menu wat mij eerst niet gelukt was.
 
 
-  <img src="readme-images/Eindscreenshot_Menu.png" width="375px" alt="screenshot hamburger menu">
+  <img src="readme-images/Ingeklapt menu.png" alt="navigatie">
 
-  <img src="readme-images/Eindscreenshot Menu _ mobiel.png" width="375px" alt="screenshot hamburger menu">
+   <img src="readme-images/Screenshot_menu_ipad.png" alt="uitgeklapt hamburgermenu">
+  
 
-   <img src="readme-images/Ingeklapt menu.png.png" alt="uitgeklapt hamburgermenu"
+
+  <img src="readme-images/Screenshot_menu.png" alt="uitgeklapt hamburgermenu">
+
+  
+
+
+
+
+
+   <img src="readme-images/Ingeklapt menu.png" alt="uitgeklapt hamburgermenu">
 
 
  Ik merkte dat ik bepaalde dingen met flexbox wilde oplosssen maar dit eigenlijk veel beter met een grid kon doen. Hierdoor ging ik tekst over afbeeldingen overlappen doormiddel van padding margin. Hierdoor was dit niet handig en responsive. Ik had voor ieder formaat een afbeelding met flexbox en dan de tekst erover heen met een hele grote margin en padding. Deze heb ik nu aangepast naar een grid.
@@ -249,7 +259,7 @@ Het is mij niet gelukt om de hamburger menu naast het logo te plaatsen.
 
   Ik heb in de root: alle kleuren juiste benamingen gegeven. Dit hielp mij de kleuren makkelijk terug te vinden als ik (var) in de css gebruikte.
 
-  <img src="readme-images/Customproperties.pngg" width="375px" alt="grid over ons">
+  <img src="readme-images/Customproperties.png" width="375px" alt="grid over ons">
 
   <img src="readme-images/Darkmode.png" width="375px" alt="grid over ons">
 
