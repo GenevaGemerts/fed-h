@@ -1,0 +1,776 @@
+@font-face {
+    font-family:'Ampersans' ;
+    src: url(../fonts/AmperSans-Light.woff2);
+    font-weight:300;
+}
+
+@font-face {
+    font-family:'Ampersans' ;
+    src: url(../fonts/AmperSans-Medium.woff2);
+    font-weight:700;
+}
+
+@font-face {
+    font-family:'Ampersans' ;
+    src: url(../fonts/AmperSans-Regular.woff2);
+    font-weight:400;
+}
+
+@font-face {
+    font-family:'ATArizona' ;
+    src: url(../fonts/ATArizonaSerif-Medium.woff);
+    font-weight:700;
+}
+
+@font-face {
+    font-family:'ATArizona' ;
+    src: url(../fonts/ATArizonaSerif-Regular.woff2);
+    font-weight:400;
+}
+
+
+
+
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+
+	/* algemeen */
+    --color:black;
+    --bg:white;
+
+    --color-text:#ffffff;
+    --color-text-a:black;
+    --color-a-lijn-hover:black;
+    --color-text-p:black;
+
+    /* header*/
+    --color-overlay-menu:#ffffffe0;
+    --color-overlay-close:black; 
+    --color-overlay-hover-a: rgb(47, 38, 221);
+    --color-text-p-:#ffffff; 
+    --color-text-h2:black;
+    --color-text-h2:#ffffff;
+    --color-backgroundh2: #F0F0F0;
+    --color-border-bottom:black;
+    --color-background-navigatie:#ffffff;
+    --color-icons-navigatie:#000000; 
+
+    --color-background-header-p:#000000;
+    --color-header-p:#fff;
+
+	--color-background:#fff;
+    --color-logo:#000;
+    --color-icons: #ffffff;
+    --color-header-text:black; 
+    --invert-icons:0;
+
+    /* section 1 */
+    --color-video-button-section1:#fdf9a1;
+    --color-video-button-hover-section1: #fdf9a1;
+    --color-sticky-button-section1:  rgb(47, 38, 221);
+    --color-sticky-button-text-section1:  rgb(251, 251, 251);
+    --color-sticky-button-hover-section1: rgba(47, 38, 221, 0.5);
+    --color-text-p-:#ffffff; 
+    
+    /* section 2 */
+    --color-text-a-section2:#000;
+    --color-p-section2:black; 
+    --color-border-section2:#fff;
+    --color-a-background-section2:#ffffff;
+    --color-a-text-section2:black; 
+    --color-a-background:#ffffff;
+    
+    /* section 3 */
+    --color-background-h2-section3:#F0F0F0;
+    --color-border-bottom-section3:black; 
+    --color-text-p-section3:black;  
+
+    /* section 4 */
+    --color-text-h2-section4:#ffffff;
+    --color-text-p-section4:#ffffff;
+    --color-background-a-section4:#ffffff;
+    --color-a-text-section4:black;
+    --color-a-hover-section4:rgba(255, 255, 255, 0.75);    
+    
+    /* section 5 */
+    --color-background-section5:black;
+    --color-background-h2:black;
+    --color-h2-section5:rgb(255, 255, 255);
+    --color-p-section5:rgb(255, 255, 255);
+    --color-border-section5:rgb(255, 255, 255);
+    
+    /* section 6 */
+    --color-background-section6:#F0F0F0; 
+    --color-backround-h2-section6:#F0F0F0;
+    --color-onderstreping-h2-section6:black;
+    --color-p-bovenafbeelding-section6: white;
+
+    /* section 7 */
+    --color-backround-section7:#D7EBC3;
+    --color-text-section7:black;
+    --color-a-section7:black; 
+    --color-p-border-section7: #4B4B4B;
+    --color-p-hover-section7:#c9c9c9;
+    
+    /* section 8 */
+    --color-text-li-section8:white;
+    --color-background-li-section8:white;
+    --color-background-a-hover-section8: rgba(255, 255, 255, 0.5);
+
+    /* section 9 */
+    --color-bordertop-section9:rgb(0, 0, 0); 
+    --color-text-section9:rgb(0, 0, 0); 
+    --color-background-section9: rgb(234, 226, 220);
+    --color-button-section9:rgb(50, 50, 50);
+    --color-background-button-section9:#000;
+    --color-text-button-section9:white;
+    --color-background-hover-transition-section9:rgb(50, 50, 50);
+    --color-h2-section9:black;
+    
+
+   /* algemeen */
+    --color-a-background-hover: rgba(255, 255, 255, 0.75);
+    
+    /*  footer */
+    --color-background-footer:black;
+    --color-text-footer:#ffffff; 
+
+    --serif:ATArizona, Arial, sans-serif ;
+    --sans-serif:AmperSans, Georgia, serif;
+}
+
+
+
+  /***** Darkmode ******/
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        /* startje */
+
+         /* Algemeen*/
+        --color:rgb(255, 255, 255);
+        --bg:rgb(45, 45, 45);
+    
+        --color-text:#000000;
+        --color-text-a:rgb(255, 255, 255);
+        --color-a-lijn-hover:rgb(255, 255, 255);
+        --color-text-p:rgb(255, 255, 255);
+    
+        /* header*/
+        --color-overlay-menu:rgb(45, 45, 45);
+        --color-overlay-close:rgb(255, 255, 255); 
+        --color-overlay-hover-a: rgb(47, 38, 221);
+        --color-text-p-:#000000; 
+        --color-text-h2:#000000;
+        --color-text-h2:#414141;
+        --color-backgroundh2: #000000;
+        --color-border-bottom:black;
+        --color-background-navigatie:rgb(45, 45, 45);
+        --color-icons-navigatie:#ffffff; 
+        --invert-icons:1;
+
+        --color-background-header-p:#000000;
+        --color-header-p:#fff;
+    
+        --color-background:rgb(45, 45, 45);
+        --color-logo:#ffffff;
+        --color-icons: #ffffff;
+        --color-header-text:rgb(255, 255, 255); 
+    
+        /* section 1 */
+        --color-video-button-section1:#fdf9a1;
+        --color-video-button-hover-section1: #fdf9a1;
+        --color-sticky-button-section1:  rgb(47, 38, 221);
+        --color-sticky-button-text-section1:  rgb(251, 251, 251);
+        --color-sticky-button-hover-section1: rgba(47, 38, 221, 0.5);
+        --color-text-p-:#ffffff; 
+        
+        /* section 2 */
+        --color-text-a-section2:#000;
+        --color-p-section2:black; 
+        --color-border-section2:#fff;
+        --color-a-background-section2:#ffffff;
+        --color-a-text-section2:black; 
+        --color-a-background:#ffffff;
+        
+        /* section 3 */
+        --color-background-h2-section3:#9e9e9e;
+    
+        /* section 4 */
+        --color-text-h2-section4:#ffffff;
+        --color-text-p-section4:#ffffff;
+        --color-background-a-section4:#ffffff;
+        --color-a-text-section4:black;
+        --color-a-hover-section4:rgba(255, 255, 255, 0.75);    
+        
+        /* section 5 */
+        --color-background-section5: rgb(45, 45, 45);
+        --color-background-h2:black;
+        --color-h2-section5:#ffffff;
+        --color-p-section5:rgb(255, 255, 255);
+        --color-border-section5:rgb(255, 255, 255);
+        
+        /* section 6 */
+        --color-background-section6:#343434; 
+        --color-backround-h2-section6:#F0F0F0;
+        --color-onderstreping-h2-section6:black;
+        --color-p-bovenafbeelding-section6: white;
+    
+  
+    
+        /* section 9 */
+        --color-bordertop-section9:rgb(0, 0, 0); 
+        --color-text-section9:rgb(255, 255, 255); 
+        --color-background-section9: rgb(123, 123, 123);
+        --color-button-section9:rgb(50, 50, 50);
+        --color-background-button-section9:#b4b4b4;
+        --color-text-button-section9:rgb(0, 0, 0);
+        --color-background-hover-transition-section9:rgb(50, 50, 50);
+        --color-h2-section9:rgb(255, 255, 255);
+        
+    
+    
+        --serif:ATArizona, Arial, sans-serif ;
+        --sans-serif:AmperSans, Georgia, serif;  
+    }
+    
+        
+
+    }
+
+
+
+   
+
+    
+
+
+ /****** OVER ONS PAGINA  ******/
+
+    :root {
+
+        /* Algemeen */
+        --color-overons-h1:black;
+        --color-overons-p:black;
+        --color-overons-border:black;
+       
+        /* section 1 */
+        --color-overons-background-section1: #f5f5f5;
+        --color-overons-borderbottom-section1:black;
+  
+        /* section 2 */
+        --color-overons-background-section2:#fcd792;
+        --color-overons-a-background-section2:black;
+        --color-overons-a-section2: #fff;
+
+        /* section 4 */
+        --color-overons-a-background-section4:black;
+        --color-overons-a-section4: #fff;
+
+        /*section 5 */
+        --color-overons-background-section5:#f5f5f5;
+        --color-overons-p-section5: #ffffff;
+
+}
+  /***** Darkmode OVER ONS  ******/
+
+@media (prefers-color-scheme:dark) {
+    :root {
+
+
+        /* Algemeen */
+        --color-overons-h1:rgb(255, 255, 255);
+        --color-overons-p:rgb(255, 253, 253);
+        --color-overons-border:rgb(0, 0, 0);
+        --color-overons-background-hover: #333;
+        --color-overons-background:black;
+
+        /* section 1 */
+        --color-overons-background-section1: #3e3e3e;
+        --color-overons-borderbottom-section1:rgb(255, 255, 255);
+  
+        /* section 2 */
+        --color-overons-background-section2:#fcd792;
+        --color-overons-a-background-section2:black;
+        --color-overons-a-section2: #fff;
+
+         /* section 2 */
+        --color-overons-a-section3: #fff;
+
+        /* section 4 */
+        --color-overons-a-background-section4:black;
+        --color-overons-a-section4: #fff;
+
+        /*section 5 */
+        --color-overons-background-section5: #3e3e3e;
+        --color-overons-p-section5: #ffffff;
+
+
+
+}
+        
+    }
+    
+
+/* bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+    box-sizing:border-box;  
+    font-family: var(--sans-serif);
+  }
+
+  
+
+/********/
+/* BODY */
+/********/
+
+/* jouw code */
+
+body {
+    margin: 0;
+    padding: 0;
+
+
+    
+}
+
+h1, h2, h3, h3 {
+    font-family: var(--serif);
+}
+
+
+button {
+    font-size:1em;
+}
+
+
+
+
+/**********/
+/* HEADER */
+/**********/
+
+
+/*********** STOPT HIER: Styling voor alle de menubalk en hamburger menu ***********/
+
+/* HIER BEGINT DE HEADER */
+
+/* Algemene stijlen voor de header */
+header {
+   
+    background-color: var(--color-background-navigatie);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 10;
+    column-gap:1em;
+}
+
+header button{
+    appearance:none;
+    border:none;
+    background-color: var(--color-white);
+    padding:0;
+}
+
+/* Logo */
+header > a {
+    /* margin-top: 0; */
+    display: flex;
+    align-items: center;
+    z-index: 20;
+    position: relative;
+
+    font-size:1em;
+    margin-top: 0;
+    margin-left: .1em;
+    width: 6em;
+}
+
+header a svg {
+    width:100%;
+    fill:var(--color-logo);
+}
+
+
+/* Hamburgerknop */
+header > button {
+    position: relative;
+    z-index: 60;
+    order:-1;
+    display: grid;
+    place-content:center;
+    width: 2em;
+    height: 1em;
+    margin-left:1em;
+    background: none;
+    cursor: pointer;
+}
+
+header > button::before,
+header > button::after,
+header > button span {
+    content: '';
+    grid-area:1/1;
+    display: block;
+    width: 1em;
+    height: 0.1em;
+    background-color: var(--color);
+    border-radius: 0.1em;
+    transition: 0.3s ease;
+}
+
+header > button::before {
+    translate: 0 -.3em;
+}
+
+header > button span {
+    /* nada */
+}
+
+header > button::after {
+    translate: 0 .3em;
+}
+
+
+/* Hamburgerknop open animatie */
+header.open > button::before {
+    translate: 0 0;
+    rotate: 45deg;
+}
+
+header.open > button span {
+    scale:0 1;
+}
+
+header.open > button::after {
+    translate: 0 0;
+    rotate: -45deg;
+}
+
+
+/* Hoofdmenu */
+header > nav:nth-of-type(1) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    z-index: 50;
+    background-color: var(--color-overlay-menu); /* Witte semi-transparante achtergrond */
+    display: flex; /* Maak zichtbaar */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    translate: -100%;
+    transition: 0.3s ease;
+}
+
+header.open > nav:nth-of-type(1) {
+    translate: 0;
+}
+
+header > nav:nth-of-type(1) ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+header > nav:nth-of-type(1) ul a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: var(--color);
+    font-family: var(--sans-serif);
+}
+
+/* Onderlijn bij hover */
+header > nav:nth-of-type(1) ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    scale:0 1;
+    height: 2px;
+    background-color: currentcolor;
+    transition: scale 0.3s ease-in-out;
+    transform-origin:left;
+}
+
+header > nav:nth-of-type(1) ul a:hover::after {
+    scale: 1 1;
+}
+
+
+/* Promo tekst */
+header > p {
+    order: -2;
+    padding: 0.5em;
+    width: 100%;
+    margin: 0;
+    background-color: var(--color-background-header-p);
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: 200;
+    color: var(--color-header-p);
+}
+
+
+/* Hot links */
+header > nav:nth-of-type(2) {
+    order: 1;
+    width: 100%;
+}
+
+header > nav:nth-of-type(2) ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header > nav:nth-of-type(2) ul a {
+    display: block;
+    padding: 0.5em;
+    color: var(--color);
+    text-decoration: none;
+}
+
+
+/* Service nav */
+header > nav:nth-of-type(3) {
+    margin-left:auto;
+}
+
+header > nav:nth-of-type(3) ul {
+    padding-left: 0;
+    margin:0 1em 0 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav:nth-of-type(3) ul li img {
+    width: 2em;
+    height: auto;
+    display: block;
+    filter:invert(var(--invert-icons));
+}
+
+
+/* Responsiviteit voor Desktop (min-width: 769px) */
+@media (width > 768px) {
+    /* Verberg hamburgerknop op desktop */
+    header > button {
+        display: none;
+    }
+
+    header > nav:nth-of-type(1) {
+        position: static;
+        translate: 0 0;
+    }
+
+    header > nav:nth-of-type(1) ul {
+        flex-direction: row;
+        gap:1em;
+    }
+
+    header > nav:nth-of-type(2) {
+        display:none;
+    }
+}
+
+
+
+
+/****** FOOTER BASISSTIJL******/
+
+
+footer {
+    background: var(--color-background-footer);
+    color:var(--color-text-footer);
+    padding: 1.5em;
+    display: grid;
+    gap: 1em;
+}
+
+/* Titel styling */
+footer h2 {
+    font-family: var(--sans-serif);
+    letter-spacing: -0.015em;
+}
+
+/* Stijl voor de ul-elementen */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+/* Algemene stijl voor de lijstitems */
+
+footer ul li a {
+    color: var(--color-text-footer);
+    text-decoration: none;
+    padding:.5em 0;
+    display:block;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Maak de afbeeldingen in de eerste ul kleiner */
+footer ul:nth-of-type(1) img {
+    width: 1em;
+    height: auto;
+    margin-right: 0.5em;
+}
+
+/* Flexbox-instellingen voor iconen in de eerste lijst */
+footer ul:nth-of-type(1) li {
+    display: flex;
+    align-items: center;
+}
+
+/* Algemeen stijl voor afbeeldingen in de vierde ul */
+footer > img:nth-of-type(1) {
+    width: 2em;
+    height: auto;
+}
+
+/* Specifieke stijl voor de locatieafbeelding */
+footer ul li a img[alt="locatie pin logo"] {
+    max-width: 0.5em;
+    height: auto;
+}
+
+/* taalkeuze */
+footer > p {
+    display:flex;
+    align-items:center;
+    gap:.5em;
+}
+
+footer > p img {
+    width: 1em;
+    height: auto;
+}
+
+/* Footer-logo */
+footer > img:nth-of-type(2) {
+    width:100%;
+}
+
+
+/* RESPONSIVE STYLING VOOR MOBIELE APPARATEN */
+@media (width > 32em) {
+    footer {
+        grid-template-columns: 1fr 1fr max-content;
+        gap:2em;
+    }
+    
+    footer h2 {
+        grid-column:1/-1;
+    }
+
+    footer ul:nth-of-type(1) {
+        grid-column:1/-1;
+    }
+
+    footer ul:nth-of-type(3) {
+        grid-column: span 2;
+    }
+
+    footer ul:nth-of-type(4) {
+        order:3;
+        grid-column:1/-1;
+    }
+
+    footer ul:nth-of-type(4) {
+        display:flex;
+        flex-wrap: wrap;
+        column-gap:1em;
+    }
+
+    footer > p {
+        grid-column: span 2;
+    }
+
+    footer > img:nth-of-type(1) {
+        order:2;
+        justify-self: end;
+    }
+
+    footer > img:nth-of-type(2) {
+        grid-column:1/-1;
+        order:4;
+    }
+}
+
+@media (width > 48em) {
+    footer {
+        grid-template-columns: 7fr 2fr 2fr;
+    }
+
+    footer h2 {
+        grid-column:1/2;
+    }
+
+    footer ul:nth-of-type(1) {
+        grid-column:1/2;
+    }
+
+    footer ul:nth-of-type(2) {
+        grid-column: 2/3;
+        grid-row:1/3;
+    }
+
+    footer ul:nth-of-type(3) {
+        grid-column: 3/4;
+        grid-row:1/3;
+    }
+
+    footer > p {
+        order:2;
+        justify-self:end;
+    }
+
+    footer > img:nth-of-type(1) {
+        order:1;
+        justify-self: start;
+    }
+}
